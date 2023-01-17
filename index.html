@@ -11,12 +11,46 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="./src/style.css" />
+    <script defer src="./dist/bundle.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1 class="heading-primary">Mapty</h1>
+      <div class="form-container">
+        <form action="" class="form hidden">
+          <div class="form__group">
+            <label for="type">Type</label>
+            <select name="type" id="type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="distance">Distance</label>
+            <input type="number" name="distance" id="distance" />
+          </div>
+          <div class="form__group">
+            <label for="duration">Duration</label>
+            <input type="number" name="duration" id="duration" />
+          </div>
+          <div class="form__group">
+            <label for="cadence">Cadence</label>
+            <input type="number" name="cadence" id="cadence" />
+          </div>
+
+          <div class="form__group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="map-container" id="map" />
     </div>
   </body>
 </html>
