@@ -2,8 +2,10 @@
   --color-primary-light: #69db7c;
   --color-primary: #37b24d;
   --color-primary-dark: #2b8a3e;
+  --color-secondary: #f59f00;
   --color-gray: #495057;
   --color-gray-light-1: #f1f3f5;
+  --color-gray-light-2: #444;
 }
 
 *,
@@ -64,7 +66,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
-  background: #444;
+  background: var(--color-gray-light-2);
   opacity: 1;
   visibility: visible;
   transition: all 0.5s ease-in-out;
@@ -83,4 +85,40 @@ body {
 .hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+.hidden-form-group {
+  display: none;
+}
+
+.workouts {
+  list-style: none;
+  color: var(--color-gray-light-1);
+  overflow-y: scroll;
+  height: 40rem;
+}
+
+.workout {
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: var(--color-gray-light-2);
+}
+
+.workout--date {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.workout--details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.workout--running {
+  border-left: 2px solid var(--color-primary);
+}
+
+.workout--cycling {
+  border-left: 2px solid var(--color-secondary);
 }

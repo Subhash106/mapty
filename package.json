@@ -1,11 +1,11 @@
 {
-  "name": "fundamental-p1",
+  "name": "mapty",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
+    "start": "webpack watch --mode development",
     "build": "webpack"
   },
   "author": "",
