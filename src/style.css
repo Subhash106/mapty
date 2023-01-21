@@ -39,16 +39,15 @@ body {
 
 .form-container {
   background-color: var(--color-gray);
-  flex-basis: 30%;
-  width: 100%;
+  width: 40rem;
   height: 100%;
-  padding: 4rem;
+  padding: 1rem;
 }
 
 .map-container {
   width: 100%;
   height: 100%;
-  flex-basis: 70%;
+  flex-basis: auto;
   background-color: var(--color-gray-light-1);
 }
 
@@ -65,8 +64,9 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
   background: var(--color-gray-light-2);
+  height: 140px;
   opacity: 1;
   visibility: visible;
   transition: all 0.5s ease-in-out;
@@ -82,9 +82,14 @@ body {
   color: var(--color-gray-light-1);
 }
 
+.form__group input {
+  width: 6rem;
+}
+
 .hidden {
   opacity: 0;
   visibility: hidden;
+  height: 0;
 }
 
 .hidden-form-group {
@@ -94,7 +99,7 @@ body {
 .workouts {
   list-style: none;
   color: var(--color-gray-light-1);
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 40rem;
 }
 

@@ -24,8 +24,8 @@
   <body>
     <div class="container">
       <div class="form-container">
-        <div class="form--container hidden">
-          <form action="" class="form">
+        <ul class="workouts">
+          <form action="" class="form hidden">
             <div class="form__group">
               <label for="type">Type</label>
               <select name="type" id="type">
@@ -57,7 +57,7 @@
                 type="number"
                 name="cadence"
                 id="cadence"
-                placeholder="stem/min"
+                placeholder="step/min"
               />
             </div>
 
@@ -75,8 +75,7 @@
               <button type="submit">Submit</button>
             </div>
           </form>
-          <ul class="workouts"></ul>
-        </div>
+        </ul>
       </div>
       <div class="map-container" id="map" />
     </div>
