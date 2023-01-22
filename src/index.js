@@ -94,15 +94,20 @@ class App {
   }
 
   _getPosition() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        this._loadMap.bind(this),
-        function (e) {
-          console.log("error accured", e);
-        }
-      );
-    }
+    this.geolocationPromise
+      .then(position => {
+        this._loadMap(position);
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
   }
+
+  geolocationPromise = new Promise(function (resolve, reject) {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    }
+  });
 
   _loadMap(position) {
     const { latitude, longitude } = position.coords;
